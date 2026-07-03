@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, BadgeCheck, Clock, MessageCircle, Truck } from 'lucide-react'
+import { ArrowRight, BadgeCheck, Clock, MessageCircle, Truck, Star, Sparkles } from 'lucide-react'
 import Reveal, { StaggerGroup, StaggerItem } from '../components/anim/Reveal'
 import { SectionHeading } from '../components/ui'
 import ProductCard from '../components/ProductCard'
@@ -18,49 +18,124 @@ export default function Home() {
   return (
     <>
       {/* ============ HERO ============ */}
-      <section className="relative -mt-[calc(5rem+2rem)] flex min-h-screen items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <motion.img
-            src="/assets/products/double-breast-suit.jpg"
-            alt="Sovereign Fashion House"
-            className="h-full w-full object-cover object-center"
-            initial={{ scale: 1.2 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 2, ease: 'easeOut' }}
+      <section className="relative -mt-[calc(5rem+2rem)] flex min-h-screen items-center overflow-hidden bg-forest-950">
+        {/* decorative background layers */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -left-32 top-10 h-[40rem] w-[40rem] rounded-full bg-forest-700/40 blur-[130px]" />
+          <div className="absolute -right-20 bottom-0 h-[34rem] w-[34rem] rounded-full bg-gold/15 blur-[130px]" />
+          <div
+            className="absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage:
+                'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
+              backgroundSize: '54px 54px',
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-forest-950/92 via-forest-950/70 to-forest-900/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-950/70 via-transparent to-transparent" />
         </div>
 
-        <div className="container-x relative z-10 pt-28">
-          <motion.p className="eyebrow text-gold-300" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }}>
-            Sovereign Fashion House Limited
-          </motion.p>
-          <motion.h1
-            className="mt-5 max-w-4xl font-serif text-5xl font-bold leading-[1.02] text-white text-shadow-lg sm:text-6xl md:text-7xl lg:text-8xl"
-            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, duration: 0.8 }}
-          >
-            Wear Your <span className="italic text-gold">Sovereignty</span>
-          </motion.h1>
-          <motion.p className="mt-6 max-w-xl text-lg leading-relaxed text-ivory/85 md:text-xl" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.8 }}>
-            Elegant, African-rooted fashion for Men, Women & Kids. Signature suits, statement dresses and bespoke pieces — crafted to make you feel unstoppable.
-          </motion.p>
-          <motion.div className="mt-9 flex flex-wrap items-center gap-4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65, duration: 0.8 }}>
-            <Link to="/shop" className="btn-gold">Shop the Collection <ArrowRight className="h-4 w-4" /></Link>
-            <Link to="/lookbook" className="btn-light">View Lookbook</Link>
-          </motion.div>
+        <div className="container-x relative z-10 grid items-center gap-12 pt-32 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:pt-28 lg:pb-0">
+          {/* ---- Copy ---- */}
+          <div>
+            <motion.span
+              className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-gold-200"
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }}
+            >
+              <Sparkles className="h-3.5 w-3.5" /> New Season · 2026 Collection
+            </motion.span>
 
-          <motion.div className="mt-14 flex flex-wrap gap-x-10 gap-y-3 border-t border-white/10 pt-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9, duration: 1 }}>
-            {[['500+', 'Happy Clients'], ['3', 'Collections'], ['25%', 'Off Select Pieces']].map(([n, l]) => (
-              <div key={l}>
-                <div className="font-serif text-3xl font-bold text-gold">{n}</div>
-                <div className="text-xs uppercase tracking-widest text-ivory/60">{l}</div>
+            <motion.h1
+              className="mt-6 font-serif text-5xl font-bold leading-[1.02] text-white text-shadow-lg sm:text-6xl md:text-7xl xl:text-[5.2rem]"
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, duration: 0.8 }}
+            >
+              Wear Your <span className="italic text-gold">Sovereignty</span>
+            </motion.h1>
+
+            <motion.p
+              className="mt-6 max-w-xl text-lg leading-relaxed text-ivory/80 md:text-xl"
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              Elegant, African-rooted fashion for Men, Women & Kids. Signature suits, statement
+              dresses and bespoke pieces — crafted to make you feel unstoppable.
+            </motion.p>
+
+            <motion.div
+              className="mt-9 flex flex-wrap items-center gap-4"
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65, duration: 0.8 }}
+            >
+              <Link to="/shop" className="btn-gold">Shop the Collection <ArrowRight className="h-4 w-4" /></Link>
+              <Link to="/lookbook" className="btn-light">View Lookbook</Link>
+            </motion.div>
+
+            <motion.div
+              className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-white/10 pt-6"
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9, duration: 1 }}
+            >
+              {[['500+', 'Happy Clients'], ['3', 'Collections'], ['25%', 'Off Select Pieces']].map(([n, l]) => (
+                <div key={l}>
+                  <div className="font-serif text-3xl font-bold text-gold">{n}</div>
+                  <div className="text-xs uppercase tracking-widest text-ivory/55">{l}</div>
+                </div>
+              ))}
+              <div className="flex items-center gap-1 text-gold">
+                {Array.from({ length: 5 }).map((_, i) => (<Star key={i} className="h-4 w-4 fill-current" />))}
+                <span className="ml-2 text-xs uppercase tracking-widest text-ivory/55">Loved by our clients</span>
               </div>
-            ))}
+            </motion.div>
+          </div>
+
+          {/* ---- Portrait composition ---- */}
+          <motion.div
+            className="relative mx-auto w-full max-w-md lg:max-w-none"
+            initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {/* gold ring accent */}
+            <div className="absolute -right-4 -top-4 -z-0 hidden h-full w-full rounded-[2.5rem] border-2 border-gold/40 lg:block" />
+
+            <div className="relative overflow-hidden rounded-[2.5rem] shadow-card ring-1 ring-white/10">
+              <motion.img
+                src="/assets/products/chinese-collar-suits.jpg"
+                alt="Sovereign Fashion House signature look"
+                className="aspect-[4/5] w-full object-cover object-[center_20%]"
+                initial={{ scale: 1.15 }} animate={{ scale: 1 }} transition={{ duration: 1.8, ease: 'easeOut' }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-forest-950/50 via-transparent to-transparent" />
+            </div>
+
+            {/* floating: new collection badge */}
+            <motion.div
+              className="absolute -left-4 top-8 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3 shadow-card backdrop-blur sm:-left-6"
+              initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1, duration: 0.7 }}
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-forest text-gold"><Sparkles className="h-5 w-5" /></span>
+              <div>
+                <p className="text-sm font-semibold text-forest-900">Signature Suits</p>
+                <p className="text-xs text-forest-500">Men · Women · Kids</p>
+              </div>
+            </motion.div>
+
+            {/* floating: women's look mini card */}
+            <motion.div
+              className="absolute -bottom-6 -right-2 w-40 overflow-hidden rounded-2xl bg-white shadow-card sm:-right-6"
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2, duration: 0.7 }}
+            >
+              <img src="/assets/products/2-piece-dresses.jpg" alt="Women's collection" className="h-28 w-full object-cover object-top" />
+              <div className="flex items-center justify-between px-3 py-2">
+                <span className="text-xs font-semibold text-forest-900">Women</span>
+                <span className="text-xs font-semibold text-gold-700">from $60</span>
+              </div>
+            </motion.div>
+
+            {/* floating free-styling pill */}
+            <motion.div
+              className="absolute -bottom-3 left-4 hidden items-center gap-2 rounded-full bg-gold px-4 py-2 text-xs font-semibold text-forest-900 shadow-gold md:flex"
+              animate={{ y: [0, -8, 0] }} transition={{ repeat: Infinity, duration: 4 }}
+            >
+              <MessageCircle className="h-4 w-4" /> Free styling on WhatsApp
+            </motion.div>
           </motion.div>
         </div>
 
-        <motion.div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2" animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
+        <motion.div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2" animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
           <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-white/40 p-1.5">
             <div className="h-2 w-1 rounded-full bg-white/70" />
           </div>
