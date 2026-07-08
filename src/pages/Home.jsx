@@ -93,7 +93,7 @@ export default function Home() {
 
             <div className="relative overflow-hidden rounded-[2.5rem] shadow-card ring-1 ring-white/10">
               <motion.img
-                src={productImg('2-piece-snota')}
+                src="/assets/chinese-collar-suits.jpg"
                 alt="Sovereign Fashion House signature look"
                 className="aspect-[4/5] w-full object-cover object-[center_20%]"
                 initial={{ scale: 1.15 }} animate={{ scale: 1 }} transition={{ duration: 1.8, ease: 'easeOut' }}

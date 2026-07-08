@@ -3,6 +3,21 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { execFileSync } from 'node:child_process'
+
+// Optimize a source image into a web-ready JPEG (resize + compress) using macOS sips.
+// execFileSync passes args directly (no shell) so filenames with $ / spaces are safe.
+// Falls back to a plain copy if sips is unavailable or fails.
+function optimizeToJpg(src, outPath) {
+  try {
+    execFileSync('sips', ['-s', 'format', 'jpeg', '-s', 'formatOptions', '82', '-Z', '1500', src, '--out', outPath], {
+      stdio: 'ignore',
+    })
+    if (!fs.existsSync(outPath)) throw new Error('sips produced no output')
+  } catch {
+    fs.copyFileSync(src, outPath)
+  }
+}
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
@@ -39,6 +54,9 @@ function classify(name) {
   return { gender, category }
 }
 
+// Products to drop from the catalogue (by slug) — flagged as not linking up / poor images.
+const EXCLUDE = new Set(['broken-suits', 'navy-blue-hipster-with-white-top'])
+
 const files = fs
   .readdirSync(SRC)
   // real products are images with a $price in the name; skip logos & stray/generated files
@@ -71,11 +89,12 @@ for (const file of files) {
 const products = []
 let idx = 0
 for (const [key, g] of groups) {
+  if (EXCLUDE.has(key)) continue
   const { gender, category } = classify(g.name)
   const images = g.files.map((file, i) => {
-    const ext = path.extname(file).toLowerCase().replace('.jpeg', '.jpg')
-    const outName = `${key}${i ? '-' + (i + 1) : ''}${ext}`
-    fs.copyFileSync(path.join(SRC, file), path.join(OUT_DIR, outName))
+    // normalize every product image to an optimized .jpg
+    const outName = `${key}${i ? '-' + (i + 1) : ''}.jpg`
+    optimizeToJpg(path.join(SRC, file), path.join(OUT_DIR, outName))
     return `/assets/products/${outName}`
   })
   idx += 1
