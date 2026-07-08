@@ -5,6 +5,7 @@ import { X, ArrowRight } from 'lucide-react'
 import { PageHero, SectionHeading } from '../components/ui'
 import Reveal from '../components/anim/Reveal'
 import { products } from '../data/products'
+import { productImg } from '../data/site'
 
 // Flatten a curated set of images for the editorial lookbook
 const gallery = products.flatMap((p) => p.images.map((src) => ({ src, name: p.name, id: p.id })))
@@ -18,7 +19,7 @@ export default function Lookbook() {
         breadcrumb="Lookbook"
         title="The Sovereign Lookbook"
         subtitle="Editorial styling and campaign imagery to inspire your next statement look."
-        image="/assets/products/pink-white-floral-three-piece-trouser-suit.jpg"
+        image={productImg('pink-white-floral-three-piece-trouser-suit')}
       />
 
       <section className="bg-ivory py-16">

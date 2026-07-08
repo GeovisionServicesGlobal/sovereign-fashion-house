@@ -1,6 +1,15 @@
 // ============================================================
 //  Sovereign Fashion House Limited — site content
 // ============================================================
+import { products } from './products'
+
+// Resolve a product image path by id (extension-agnostic — reads generated data).
+// Falls back to the first available product image so pages never 404 on a missing id.
+export const productImg = (id, i = 0) => {
+  const p = products.find((x) => x.id === id)
+  if (p) return p.images[i] || p.images[0]
+  return products[0]?.images[0] || ''
+}
 
 export const brand = {
   name: 'Sovereign Fashion House',
@@ -54,7 +63,7 @@ export const usps = [
 ]
 
 export const collectionsHero = [
-  { gender: 'Women', tagline: 'Grace in every thread', image: '/assets/products/2-piece-dresses.jpg' },
-  { gender: 'Men', tagline: 'Tailored sovereignty', image: '/assets/products/double-breast-suit.jpg' },
-  { gender: 'Kids', tagline: 'Little icons in the making', image: '/assets/products/orange-pallazo-with-white-top.jpg' },
+  { gender: 'Women', tagline: 'Grace in every thread', image: productImg('2-piece-dresses') },
+  { gender: 'Men', tagline: 'Tailored sovereignty', image: productImg('double-breast-suit') },
+  { gender: 'Kids', tagline: 'Little icons in the making', image: productImg('orange-pallazo-with-white-top') },
 ]

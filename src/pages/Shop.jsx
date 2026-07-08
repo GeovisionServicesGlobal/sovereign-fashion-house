@@ -5,6 +5,7 @@ import { PageHero } from '../components/ui'
 import Reveal, { StaggerGroup, StaggerItem } from '../components/anim/Reveal'
 import ProductCard from '../components/ProductCard'
 import { products, categories, genders } from '../data/products'
+import { productImg } from '../data/site'
 
 const sorts = [
   { id: 'featured', label: 'Featured' },
@@ -57,7 +58,7 @@ export default function Shop() {
         breadcrumb="Shop"
         title={title}
         subtitle="Signature pieces crafted with elegance and African creativity. Tap any piece to view details or add straight to your bag."
-        image="/assets/products/blue-stripped-suit.jpg"
+        image={productImg('blue-stripped-suit')}
       />
 
       <section className="bg-ivory py-12">

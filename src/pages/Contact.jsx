@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone, Send } from 'lucide-react'
 import { PageHero } from '../components/ui'
 import Reveal from '../components/anim/Reveal'
 import SocialIcon from '../components/SocialIcon'
-import { contact, socials, waLink } from '../data/site'
+import { contact, socials, waLink, productImg } from '../data/site'
 
 const subjects = ['Order Support', 'Product Enquiry', 'Custom Order', 'Delivery Question', 'Wholesale / Partnership', 'Other']
 
@@ -23,7 +23,7 @@ export default function Contact() {
         breadcrumb="Contact"
         title="We’re here to help"
         subtitle="Order support, product questions, custom enquiries — reach us and we’ll respond quickly."
-        image="/assets/products/red-trouser-with-white-top.jpg"
+        image={productImg('red-trouser-with-white-top')}
       />
 
       <section className="bg-ivory py-24">

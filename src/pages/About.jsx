@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Gem, Globe2, HeartHandshake, Scissors } from 'lucide-react'
 import { PageHero, SectionHeading } from '../components/ui'
 import Reveal, { StaggerGroup, StaggerItem } from '../components/anim/Reveal'
-import { brand } from '../data/site'
+import { brand, productImg } from '../data/site'
 
 const values = [
   { icon: Gem, title: 'Elegance', text: 'Timeless design and refined finishing in every piece.' },
@@ -18,14 +18,14 @@ export default function About() {
         breadcrumb="About"
         title="The house of purposeful style"
         subtitle={brand.philosophy}
-        image="/assets/products/chinese-collar-suits.jpg"
+        image={productImg('blue-stripped-suit')}
       />
 
       <section className="bg-ivory py-24">
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <Reveal direction="right">
             <div className="relative">
-              <img src="/assets/products/2-piece-skirt.jpg" alt="Sovereign Fashion House" className="w-full rounded-[2rem] object-cover shadow-card" />
+              <img src={productImg('2-piece-skirt')} alt="Sovereign Fashion House" className="w-full rounded-[2rem] object-cover shadow-card" />
               <div className="absolute -left-5 -top-5 -z-10 h-44 w-44 rounded-2xl border-2 border-gold/40" />
             </div>
           </Reveal>

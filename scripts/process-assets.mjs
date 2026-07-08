@@ -41,7 +41,8 @@ function classify(name) {
 
 const files = fs
   .readdirSync(SRC)
-  .filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && !/logo/i.test(f))
+  // real products are images with a $price in the name; skip logos & stray/generated files
+  .filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && !/logo|chatgpt/i.test(f) && /\$\s*\d/.test(f))
 
 // Parse & group by normalized name (merge duplicate shots into one product gallery)
 const groups = new Map()

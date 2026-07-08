@@ -3,7 +3,7 @@ import { Ruler, Palette, CalendarClock, Sparkles } from 'lucide-react'
 import { PageHero, SectionHeading } from '../components/ui'
 import Reveal, { StaggerGroup, StaggerItem } from '../components/anim/Reveal'
 import SocialIcon from '../components/SocialIcon'
-import { waLink } from '../data/site'
+import { waLink, productImg } from '../data/site'
 
 const steps = [
   { icon: Palette, title: 'Share Your Vision', text: 'Tell us the occasion, style and fabric you have in mind.' },
@@ -30,7 +30,7 @@ export default function CustomOrders() {
         breadcrumb="Custom Orders"
         title="Bespoke, made just for you"
         subtitle="Occasion gowns, power suits and statement pieces — tailored to your measurements, fabric and timeline."
-        image="/assets/products/4-piece-suits.jpg"
+        image={productImg('4-piece-suits')}
       />
 
       {/* Steps */}
@@ -62,7 +62,7 @@ export default function CustomOrders() {
               Fill in a few details and we’ll continue the conversation on WhatsApp — sharing fabric options, pricing and
               your fitting schedule.
             </p>
-            <img src="/assets/products/orange-pallazo-with-white-top.jpg" alt="" className="mt-8 hidden rounded-3xl object-cover shadow-card lg:block" />
+            <img src={productImg('orange-pallazo-with-white-top')} alt="" className="mt-8 hidden rounded-3xl object-cover shadow-card lg:block" />
           </Reveal>
 
           <Reveal direction="left" delay={0.1}>

@@ -4,7 +4,7 @@ import { ArrowRight, BadgeCheck, Clock, MessageCircle, Truck, Star, Sparkles } f
 import Reveal, { StaggerGroup, StaggerItem } from '../components/anim/Reveal'
 import { SectionHeading } from '../components/ui'
 import ProductCard from '../components/ProductCard'
-import { brand, usps, collectionsHero } from '../data/site'
+import { brand, usps, collectionsHero, productImg } from '../data/site'
 import { products } from '../data/products'
 
 const uspIcon = { truck: Truck, clock: Clock, 'badge-check': BadgeCheck, 'message-circle': MessageCircle }
@@ -93,7 +93,7 @@ export default function Home() {
 
             <div className="relative overflow-hidden rounded-[2.5rem] shadow-card ring-1 ring-white/10">
               <motion.img
-                src="/assets/products/chinese-collar-suits.jpg"
+                src={productImg('2-piece-snota')}
                 alt="Sovereign Fashion House signature look"
                 className="aspect-[4/5] w-full object-cover object-[center_20%]"
                 initial={{ scale: 1.15 }} animate={{ scale: 1 }} transition={{ duration: 1.8, ease: 'easeOut' }}
@@ -118,7 +118,7 @@ export default function Home() {
               className="absolute -bottom-6 -right-2 w-40 overflow-hidden rounded-2xl bg-white shadow-card sm:-right-6"
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2, duration: 0.7 }}
             >
-              <img src="/assets/products/2-piece-dresses.jpg" alt="Women's collection" className="h-28 w-full object-cover object-top" />
+              <img src={productImg('2-piece-dresses')} alt="Women's collection" className="h-28 w-full object-cover object-top" />
               <div className="flex items-center justify-between px-3 py-2">
                 <span className="text-xs font-semibold text-forest-900">Women</span>
                 <span className="text-xs font-semibold text-gold-700">from $60</span>
@@ -222,8 +222,8 @@ export default function Home() {
         <div className="container-x relative grid items-center gap-12 lg:grid-cols-2">
           <Reveal direction="right">
             <div className="grid grid-cols-2 gap-4">
-              <img src="/assets/products/2-piece-dresses.jpg" alt="" className="mt-8 rounded-2xl object-cover shadow-card" />
-              <img src="/assets/products/grey-pin-stripped-suit.jpg" alt="" className="rounded-2xl object-cover shadow-card" />
+              <img src={productImg('2-piece-dresses')} alt="" className="mt-8 rounded-2xl object-cover shadow-card" />
+              <img src={productImg('grey-pin-stripped-suit')} alt="" className="rounded-2xl object-cover shadow-card" />
             </div>
           </Reveal>
           <Reveal direction="left" delay={0.1}>

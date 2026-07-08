@@ -7,7 +7,7 @@ export const products = [
     "gender": "Women",
     "category": "Dresses",
     "images": [
-      "/assets/products/2-piece-dresses.jpg"
+      "/assets/products/2-piece-dresses.png"
     ],
     "bestSeller": false,
     "isNew": false
@@ -19,7 +19,7 @@ export const products = [
     "gender": "Women",
     "category": "Suits",
     "images": [
-      "/assets/products/2-piece-jean-trouser-suit.jpg"
+      "/assets/products/2-piece-jean-trouser-suit.png"
     ],
     "bestSeller": false,
     "isNew": false
@@ -31,7 +31,7 @@ export const products = [
     "gender": "Women",
     "category": "Skirts & Sets",
     "images": [
-      "/assets/products/2-piece-skirt.jpg"
+      "/assets/products/2-piece-skirt.png"
     ],
     "bestSeller": true,
     "isNew": false
@@ -43,7 +43,7 @@ export const products = [
     "gender": "Women",
     "category": "Trousers & Sets",
     "images": [
-      "/assets/products/2-piece-snota.jpg"
+      "/assets/products/2-piece-snota.png"
     ],
     "bestSeller": false,
     "isNew": true
@@ -55,8 +55,7 @@ export const products = [
     "gender": "Women",
     "category": "Suits",
     "images": [
-      "/assets/products/2-piece-suits.jpg",
-      "/assets/products/2-piece-suits-2.jpg"
+      "/assets/products/2-piece-suits.png"
     ],
     "bestSeller": false,
     "isNew": false
@@ -68,8 +67,8 @@ export const products = [
     "gender": "Women",
     "category": "Trousers & Sets",
     "images": [
-      "/assets/products/2-piece-trouser-set.jpg",
-      "/assets/products/2-piece-trouser-set-2.jpg"
+      "/assets/products/2-piece-trouser-set.png",
+      "/assets/products/2-piece-trouser-set-2.png"
     ],
     "bestSeller": true,
     "isNew": false
@@ -81,8 +80,8 @@ export const products = [
     "gender": "Women",
     "category": "Suits",
     "images": [
-      "/assets/products/3-piece-suits.jpg",
-      "/assets/products/3-piece-suits-2.jpg"
+      "/assets/products/3-piece-suits.png",
+      "/assets/products/3-piece-suits-2.png"
     ],
     "bestSeller": false,
     "isNew": false
@@ -94,7 +93,7 @@ export const products = [
     "gender": "Women",
     "category": "Suits",
     "images": [
-      "/assets/products/4-piece-suits.jpg"
+      "/assets/products/4-piece-suits.png"
     ],
     "bestSeller": false,
     "isNew": true
@@ -106,7 +105,7 @@ export const products = [
     "gender": "Women",
     "category": "Tops & Blouses",
     "images": [
-      "/assets/products/animal-print-blouses.jpg"
+      "/assets/products/animal-print-blouses.png"
     ],
     "bestSeller": true,
     "isNew": false
@@ -118,10 +117,10 @@ export const products = [
     "gender": "Women",
     "category": "Blazers",
     "images": [
-      "/assets/products/blazers.jpg",
-      "/assets/products/blazers-2.jpg",
-      "/assets/products/blazers-3.jpg",
-      "/assets/products/blazers-4.jpg"
+      "/assets/products/blazers.png",
+      "/assets/products/blazers-2.png",
+      "/assets/products/blazers-3.png",
+      "/assets/products/blazers-4.png"
     ],
     "bestSeller": false,
     "isNew": false
@@ -133,7 +132,7 @@ export const products = [
     "gender": "Women",
     "category": "Tops & Blouses",
     "images": [
-      "/assets/products/blouse-with-love-heart-print.jpg"
+      "/assets/products/blouse-with-love-heart-print.png"
     ],
     "bestSeller": false,
     "isNew": false
@@ -145,7 +144,7 @@ export const products = [
     "gender": "Women",
     "category": "Tops & Blouses",
     "images": [
-      "/assets/products/blouses-with-silver-detail.jpg"
+      "/assets/products/blouses-with-silver-detail.png"
     ],
     "bestSeller": true,
     "isNew": true
@@ -157,7 +156,7 @@ export const products = [
     "gender": "Men",
     "category": "Suits",
     "images": [
-      "/assets/products/blue-stripped-suit.jpg"
+      "/assets/products/blue-stripped-suit.png"
     ],
     "bestSeller": false,
     "isNew": false
@@ -169,7 +168,7 @@ export const products = [
     "gender": "Kids",
     "category": "Trousers & Sets",
     "images": [
-      "/assets/products/blue-white-trouser-with-white-top.jpg"
+      "/assets/products/blue-white-trouser-with-white-top.png"
     ],
     "bestSeller": false,
     "isNew": false
@@ -181,7 +180,7 @@ export const products = [
     "gender": "Men",
     "category": "Suits",
     "images": [
-      "/assets/products/broken-suits.jpg"
+      "/assets/products/broken-suits.png"
     ],
     "bestSeller": true,
     "isNew": false
@@ -193,7 +192,7 @@ export const products = [
     "gender": "Women",
     "category": "Tops & Blouses",
     "images": [
-      "/assets/products/camisole.jpg"
+      "/assets/products/camisole.png"
     ],
     "bestSeller": false,
     "isNew": true
@@ -205,21 +204,9 @@ export const products = [
     "gender": "Women",
     "category": "Blazers",
     "images": [
-      "/assets/products/checked-blazers-with-bronch.jpg"
+      "/assets/products/checked-blazers-with-bronch.png"
     ],
     "bestSeller": false,
-    "isNew": false
-  },
-  {
-    "id": "chinese-collar-suits",
-    "name": "Chinese Collar Suits",
-    "price": 300,
-    "gender": "Men",
-    "category": "Suits",
-    "images": [
-      "/assets/products/chinese-collar-suits.jpg"
-    ],
-    "bestSeller": true,
     "isNew": false
   },
   {
@@ -229,9 +216,9 @@ export const products = [
     "gender": "Men",
     "category": "Suits",
     "images": [
-      "/assets/products/double-breast-suit.jpg"
+      "/assets/products/double-breast-suit.png"
     ],
-    "bestSeller": false,
+    "bestSeller": true,
     "isNew": false
   },
   {
@@ -244,7 +231,7 @@ export const products = [
       "/assets/products/dresses.jpg"
     ],
     "bestSeller": false,
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "grey-pin-stripped-suit",
@@ -255,8 +242,8 @@ export const products = [
     "images": [
       "/assets/products/grey-pin-stripped-suit.jpg"
     ],
-    "bestSeller": true,
-    "isNew": false
+    "bestSeller": false,
+    "isNew": true
   },
   {
     "id": "navy-blue-hipster-with-white-top",
@@ -267,7 +254,7 @@ export const products = [
     "images": [
       "/assets/products/navy-blue-hipster-with-white-top.jpg"
     ],
-    "bestSeller": false,
+    "bestSeller": true,
     "isNew": false
   },
   {
@@ -291,8 +278,8 @@ export const products = [
     "images": [
       "/assets/products/pink-white-floral-three-piece-trouser-suit.jpg"
     ],
-    "bestSeller": true,
-    "isNew": true
+    "bestSeller": false,
+    "isNew": false
   },
   {
     "id": "red-trouser-with-white-top",
@@ -303,8 +290,8 @@ export const products = [
     "images": [
       "/assets/products/red-trouser-with-white-top.jpg"
     ],
-    "bestSeller": false,
-    "isNew": false
+    "bestSeller": true,
+    "isNew": true
   },
   {
     "id": "skirt-suit-fuschia-white-stripped",
@@ -327,7 +314,7 @@ export const products = [
     "images": [
       "/assets/products/skirt-suit-mustard-white-stripped.jpg"
     ],
-    "bestSeller": true,
+    "bestSeller": false,
     "isNew": false
   },
   {
@@ -339,8 +326,8 @@ export const products = [
     "images": [
       "/assets/products/skirt-suit-white-green-blue.jpg"
     ],
-    "bestSeller": false,
-    "isNew": true
+    "bestSeller": true,
+    "isNew": false
   },
   {
     "id": "white-hipster-with-royal-blue-floral-top",
@@ -352,7 +339,7 @@ export const products = [
       "/assets/products/white-hipster-with-royal-blue-floral-top.jpg"
     ],
     "bestSeller": false,
-    "isNew": false
+    "isNew": true
   }
 ]
 

@@ -2,6 +2,7 @@ import { Truck, RefreshCw, Clock, ShieldCheck, MapPin, PackageCheck } from 'luci
 import { PageHero, SectionHeading } from '../components/ui'
 import Reveal, { StaggerGroup, StaggerItem } from '../components/anim/Reveal'
 import { CTAWhatsApp } from '../components/CTAWhatsApp'
+import { productImg } from '../data/site'
 
 const cards = [
   { icon: Clock, title: 'Next-Day Delivery', text: 'Within Nairobi, order before cut-off for next-day delivery.' },
@@ -27,7 +28,7 @@ export default function DeliveryReturns() {
         breadcrumb="Help"
         title="Delivery & Returns"
         subtitle="Fast, reliable delivery and hassle-free exchanges — so you can shop with total confidence."
-        image="/assets/products/blazers.jpg"
+        image={productImg('blazers')}
       />
 
       <section className="bg-ivory py-20">
