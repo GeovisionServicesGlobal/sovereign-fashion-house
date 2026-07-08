@@ -111,6 +111,18 @@ export const products = [
     "isNew": false
   },
   {
+    "id": "black-halter-bow-midi-dress",
+    "name": "Black Halter Bow Midi Dress",
+    "price": 200,
+    "gender": "Women",
+    "category": "Dresses",
+    "images": [
+      "/assets/products/black-halter-bow-midi-dress.jpg"
+    ],
+    "bestSeller": true,
+    "isNew": true
+  },
+  {
     "id": "blazers",
     "name": "Blazers",
     "price": 100,
@@ -147,6 +159,30 @@ export const products = [
       "/assets/products/blouses-with-silver-detail.jpg"
     ],
     "bestSeller": true,
+    "isNew": true
+  },
+  {
+    "id": "blue-heart-print-bow-blouse",
+    "name": "Blue Heart-Print Bow Blouse",
+    "price": 60,
+    "gender": "Women",
+    "category": "Tops & Blouses",
+    "images": [
+      "/assets/products/blue-heart-print-bow-blouse.jpg"
+    ],
+    "bestSeller": true,
+    "isNew": true
+  },
+  {
+    "id": "blue-snakeprint-shirt",
+    "name": "Blue Snakeprint Shirt",
+    "price": 65,
+    "gender": "Women",
+    "category": "Tops & Blouses",
+    "images": [
+      "/assets/products/blue-snakeprint-shirt.jpg"
+    ],
+    "bestSeller": false,
     "isNew": true
   },
   {
@@ -222,6 +258,18 @@ export const products = [
     "isNew": false
   },
   {
+    "id": "green-stripe-skirt-top",
+    "name": "Green Stripe Skirt & Top",
+    "price": 100,
+    "gender": "Kids",
+    "category": "Skirts & Sets",
+    "images": [
+      "/assets/products/green-stripe-skirt-top.jpg"
+    ],
+    "bestSeller": true,
+    "isNew": true
+  },
+  {
     "id": "grey-pin-stripped-suit",
     "name": "Grey Pin Stripped Suit",
     "price": 350,
@@ -234,6 +282,42 @@ export const products = [
     "isNew": false
   },
   {
+    "id": "ikat-print-blouse-trouser-set",
+    "name": "Ikat Print Blouse & Trouser Set",
+    "price": 150,
+    "gender": "Women",
+    "category": "Trousers & Sets",
+    "images": [
+      "/assets/products/ikat-print-blouse-trouser-set.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
+    "id": "navy-classic-two-piece-suit",
+    "name": "Navy Classic Two-Piece Suit",
+    "price": 250,
+    "gender": "Men",
+    "category": "Suits",
+    "images": [
+      "/assets/products/navy-classic-two-piece-suit.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
+    "id": "orange-palazzo-ruffle-top",
+    "name": "Orange Palazzo & Ruffle Top",
+    "price": 150,
+    "gender": "Kids",
+    "category": "Trousers & Sets",
+    "images": [
+      "/assets/products/orange-palazzo-ruffle-top.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
     "id": "orange-pallazo-with-white-top",
     "name": "Orange Pallazo with White Top",
     "price": 150,
@@ -241,6 +325,30 @@ export const products = [
     "category": "Tops & Blouses",
     "images": [
       "/assets/products/orange-pallazo-with-white-top.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
+    "id": "orange-ruffle-dress",
+    "name": "Orange Ruffle Dress",
+    "price": 100,
+    "gender": "Kids",
+    "category": "Dresses",
+    "images": [
+      "/assets/products/orange-ruffle-dress.jpg"
+    ],
+    "bestSeller": true,
+    "isNew": true
+  },
+  {
+    "id": "pink-blazer-floral-dress-set",
+    "name": "Pink Blazer & Floral Dress Set",
+    "price": 150,
+    "gender": "Kids",
+    "category": "Dresses",
+    "images": [
+      "/assets/products/pink-blazer-floral-dress-set.jpg"
     ],
     "bestSeller": false,
     "isNew": true
@@ -258,6 +366,30 @@ export const products = [
     "isNew": false
   },
   {
+    "id": "piped-two-piece-lounge-set",
+    "name": "Piped Two-Piece Lounge Set",
+    "price": 150,
+    "gender": "Women",
+    "category": "Trousers & Sets",
+    "images": [
+      "/assets/products/piped-two-piece-lounge-set.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
+    "id": "red-trouser-ruffle-top",
+    "name": "Red Trouser & Ruffle Top",
+    "price": 100,
+    "gender": "Kids",
+    "category": "Trousers & Sets",
+    "images": [
+      "/assets/products/red-trouser-ruffle-top.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
     "id": "red-trouser-with-white-top",
     "name": "Red Trouser with White Top",
     "price": 100,
@@ -268,6 +400,30 @@ export const products = [
     ],
     "bestSeller": false,
     "isNew": false
+  },
+  {
+    "id": "royal-blue-chain-prince-suit",
+    "name": "Royal Blue Chain Prince Suit",
+    "price": 350,
+    "gender": "Men",
+    "category": "Suits",
+    "images": [
+      "/assets/products/royal-blue-chain-prince-suit.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
+    "id": "royal-blue-pinstripe-suit",
+    "name": "Royal Blue Pinstripe Suit",
+    "price": 350,
+    "gender": "Men",
+    "category": "Suits",
+    "images": [
+      "/assets/products/royal-blue-pinstripe-suit.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
   },
   {
     "id": "skirt-suit-fuschia-white-stripped",
@@ -306,16 +462,76 @@ export const products = [
     "isNew": false
   },
   {
-    "id": "white-hipster-with-royal-blue-floral-top",
-    "name": "White Hipster with Royal Blue Floral Top",
-    "price": 100,
-    "gender": "Kids",
-    "category": "Tops & Blouses",
+    "id": "speckled-knit-jacket-set",
+    "name": "Speckled Knit Jacket Set",
+    "price": 150,
+    "gender": "Men",
+    "category": "Suits",
     "images": [
-      "/assets/products/white-hipster-with-royal-blue-floral-top.jpg"
+      "/assets/products/speckled-knit-jacket-set.jpg"
     ],
     "bestSeller": false,
-    "isNew": false
+    "isNew": true
+  },
+  {
+    "id": "tailored-trouser-suit",
+    "name": "Tailored Trouser Suit",
+    "price": 180,
+    "gender": "Women",
+    "category": "Suits",
+    "images": [
+      "/assets/products/tailored-trouser-suit.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
+    "id": "tan-blazer-navy-trouser-set",
+    "name": "Tan Blazer & Navy Trouser Set",
+    "price": 250,
+    "gender": "Men",
+    "category": "Suits",
+    "images": [
+      "/assets/products/tan-blazer-navy-trouser-set.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
+    "id": "teal-double-breasted-suit",
+    "name": "Teal Double-Breasted Suit",
+    "price": 350,
+    "gender": "Men",
+    "category": "Suits",
+    "images": [
+      "/assets/products/teal-double-breasted-suit.jpg"
+    ],
+    "bestSeller": true,
+    "isNew": true
+  },
+  {
+    "id": "turquoise-tailored-blazer",
+    "name": "Turquoise Tailored Blazer",
+    "price": 100,
+    "gender": "Women",
+    "category": "Blazers",
+    "images": [
+      "/assets/products/turquoise-tailored-blazer.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
+  },
+  {
+    "id": "white-bow-top-flared-trouser",
+    "name": "White Bow Top & Flared Trouser",
+    "price": 100,
+    "gender": "Kids",
+    "category": "Trousers & Sets",
+    "images": [
+      "/assets/products/white-bow-top-flared-trouser.jpg"
+    ],
+    "bestSeller": false,
+    "isNew": true
   }
 ]
 

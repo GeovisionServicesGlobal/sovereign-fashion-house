@@ -57,6 +57,34 @@ function classify(name) {
 // Products to drop from the catalogue (by slug) — flagged as not linking up / poor images.
 const EXCLUDE = new Set(['broken-suits', 'navy-blue-hipster-with-white-top'])
 
+// Hand-curated studio shots added in assets/{men,women,Kids}. These have no price in
+// the filename, so name / category / price are authored here. Prices align with the
+// existing catalogue ranges and can be adjusted anytime.
+const CURATED = [
+  // ---- Men ----
+  { src: 'men/men-2.png', name: 'Navy Classic Two-Piece Suit', price: 250, gender: 'Men', category: 'Suits' },
+  { src: 'men/men-3.png', name: 'Tan Blazer & Navy Trouser Set', price: 250, gender: 'Men', category: 'Suits' },
+  { src: 'men/men-4.png', name: 'Teal Double-Breasted Suit', price: 350, gender: 'Men', category: 'Suits' },
+  { src: 'men/men-5.png', name: 'Royal Blue Pinstripe Suit', price: 350, gender: 'Men', category: 'Suits' },
+  { src: 'men/men-1.png', name: 'Speckled Knit Jacket Set', price: 150, gender: 'Men', category: 'Suits' },
+  { src: 'men/ChatGPT Image Jul 8, 2026, 11_39_52 AM.png', name: 'Royal Blue Chain Prince Suit', price: 350, gender: 'Men', category: 'Suits' },
+  // ---- Women ----
+  { src: 'women/women-6.png', name: 'Black Halter Bow Midi Dress', price: 200, gender: 'Women', category: 'Dresses' },
+  { src: 'women/women-7.png', name: 'Tailored Trouser Suit', price: 180, gender: 'Women', category: 'Suits' },
+  { src: 'women/women-2.png', name: 'Turquoise Tailored Blazer', price: 100, gender: 'Women', category: 'Blazers' },
+  { src: 'women/women-1.png', name: 'Blue Snakeprint Shirt', price: 65, gender: 'Women', category: 'Tops & Blouses' },
+  { src: 'women/women-3.png', name: 'Blue Heart-Print Bow Blouse', price: 60, gender: 'Women', category: 'Tops & Blouses' },
+  { src: 'women/women-5.png', name: 'Ikat Print Blouse & Trouser Set', price: 150, gender: 'Women', category: 'Trousers & Sets' },
+  { src: 'women/women-4.png', name: 'Piped Two-Piece Lounge Set', price: 150, gender: 'Women', category: 'Trousers & Sets' },
+  // ---- Kids ----
+  { src: 'Kids/kids-3.png', name: 'Pink Blazer & Floral Dress Set', price: 150, gender: 'Kids', category: 'Dresses' },
+  { src: 'Kids/kids-1.png', name: 'Orange Ruffle Dress', price: 100, gender: 'Kids', category: 'Dresses' },
+  { src: 'Kids/kids-2.png', name: 'White Bow Top & Flared Trouser', price: 100, gender: 'Kids', category: 'Trousers & Sets' },
+  { src: 'Kids/kids-4.png', name: 'Orange Palazzo & Ruffle Top', price: 150, gender: 'Kids', category: 'Trousers & Sets' },
+  { src: 'Kids/kids-5.png', name: 'Red Trouser & Ruffle Top', price: 100, gender: 'Kids', category: 'Trousers & Sets' },
+  { src: 'Kids/kids-6.png', name: 'Green Stripe Skirt & Top', price: 100, gender: 'Kids', category: 'Skirts & Sets' },
+]
+
 const files = fs
   .readdirSync(SRC)
   // real products are images with a $price in the name; skip logos & stray/generated files
@@ -108,6 +136,29 @@ for (const [key, g] of groups) {
     // rotate some flags for merchandising
     bestSeller: idx % 3 === 0,
     isNew: idx % 4 === 0,
+  })
+}
+
+// ---- Curated studio shots (hand-authored name/price) ----
+for (const c of CURATED) {
+  const srcPath = path.join(SRC, c.src)
+  if (!fs.existsSync(srcPath)) {
+    console.warn('  ! curated source missing, skipping:', c.src)
+    continue
+  }
+  const key = slugify(c.name)
+  const outName = `${key}.jpg`
+  optimizeToJpg(srcPath, path.join(OUT_DIR, outName))
+  idx += 1
+  products.push({
+    id: key,
+    name: c.name,
+    price: c.price,
+    gender: c.gender,
+    category: c.category,
+    images: [`/assets/products/${outName}`],
+    bestSeller: idx % 4 === 0,
+    isNew: true, // freshly added -> surface in New Arrivals
   })
 }
 
